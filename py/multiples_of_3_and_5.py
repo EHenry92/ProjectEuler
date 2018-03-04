@@ -12,4 +12,4 @@ def multipleSum (upperBound) :
   return total;
 
 print(multipleSum(10));
-print(multipleSum(100));
+print(multipleSum(1000));

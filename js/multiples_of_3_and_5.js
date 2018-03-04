@@ -17,4 +17,4 @@ const multipleSum = (upperBound) => {
 };
 
 console.log(multipleSum(10));
-console.log(multipleSum(100));
+console.log(multipleSum(1000));
