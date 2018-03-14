@@ -6,21 +6,7 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 */
 
-const isPyTriplet = (a, b, c) =>
-  Math.pow(a, 2) + Math.pow(b, 2) === Math.pow(c, 2);
-
-/*
-a + b + c = y ----> c = y - a - b
-a^2 + b^2 = c^2 ----> a^2 + b^2 = (y - a - b)^2
-  ...
-  0 = y^2 - 2ya - 2yb + 2ab
-  ...
-  -(y^2)/2 = ab - ya - yb
-  ...
-  [(y^2) /2 ] + ya = b(a - y)
-  ...
-    ([-(y^2) /2 ] + ya )/ (a-y)= b
-*/
+const isPyTriplet = (a, b, c) => Math.pow(a, 2) + Math.pow(b, 2) === Math.pow(c, 2);
 
 const specialPythagoreanTriplet = (sum) => {
   for (let a = 1; a < sum / 3; a++) {
@@ -37,3 +23,18 @@ const specialPythagoreanTriplet = (sum) => {
 console.log(specialPythagoreanTriplet(12));
 console.log(specialPythagoreanTriplet(30));
 console.log(specialPythagoreanTriplet(1000));
+
+
+/*
+  Logic:
+  a + b + c = y ----> c = y - a - b
+  a^2 + b^2 = c^2 ----> a^2 + b^2 = (y - a - b)^2
+    ...
+    0 = y^2 - 2ya - 2yb + 2ab
+    ...
+    -(y^2)/2 = ab - ya - yb
+    ...
+    [(y^2) /2 ] + ya = b(a - y)
+    ...
+      ([-(y^2) /2 ] + ya )/ (a-y) = b
+*/
