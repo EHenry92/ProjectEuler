@@ -1,8 +1,9 @@
 const smallestFactor = val => {
-  for (let i = 2; i <= val / 2; i++) {
+  if (val !==2 && val % 2 === 0) {return 2;}
+  for (let i = 3; i <= val / 2; i= i + 2) {
     if (val % i === 0) {return i;}
   }
-  return 0;
+  return 1;
 };
 
 module.exports = smallestFactor;

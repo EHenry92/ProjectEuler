@@ -2,12 +2,8 @@
 The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 */
-const isPrime = val => {
-  for (let i = 2; i < val; i++) {
-    if (val % i === 0) {return false;}
-  }
-  return true;
-};
+
+var smallestFactor = require('./helper/smallestFactor');
 
 const largestPrimeFactor = num => {
   let largest = 1,
@@ -16,8 +12,8 @@ const largestPrimeFactor = num => {
   while ( i <= j) {
     if (num % i == 0) {
       j = num / i;
-      if (isPrime(j)) {return j;}
-      if (isPrime(i)) {largest = i;}
+      if (smallestFactor(j) === 1) {return j;}
+      if (smallestFactor(i) === 1) {largest = i;}
     }
     i++;
   }

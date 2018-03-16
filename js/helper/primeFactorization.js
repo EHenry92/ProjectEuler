@@ -3,7 +3,7 @@ const primeFactorization = (num) => {
   if (num < 1) {return {};}
   const fac = smallestFactor(num);
   let out;
-  if (fac <= 1) {
+  if (fac === 1) {
     out = {};
     out[num] = 1;
     return out;

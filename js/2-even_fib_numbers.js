@@ -17,4 +17,5 @@ let fibSum = (upperBound) => {
   return total;
 }
 
+console.log(fibSum(10));
 console.log(fibSum(4000000));
