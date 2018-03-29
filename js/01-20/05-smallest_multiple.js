@@ -8,7 +8,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 smallestMultiple = 1 * 2^3 * 3^3 * 5 * 7 = 2520
 */
 
-var primeFactorization = require('./helper/primeFactorization');
+var primeFactorization = require('../helper/primeFactorization');
 
 
 const multiplyPrimes = obj => {
